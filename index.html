@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sivaranjani's Website</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9ff;
+    }
+
+    .menu-icon {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    .bar {
+      width: 30px;
+      height: 4px;
+      background-color: #333;
+      margin: 6px 0;
+      border-radius: 2px;
+    }
+
+    .menu-items {
+      display: none;
+      position: absolute;
+      top: 50px;
+      right: 20px;
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 10px;
+      border-radius: 8px;
+      z-index: 1;
+    }
+
+    .menu-items a {
+      display: block;
+      text-decoration: none;
+      color: #333;
+      padding: 8px 12px;
+      border-radius: 5px;
+    }
+
+    .menu-items a:hover {
+      background-color: #e0e0ff;
+    }
+
+    #content {
+      margin-top: 100px;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .content-box {
+      background: linear-gradient(135deg, #d3cce3, #e9e4f0);
+      display: inline-block;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      max-width: 900px;
+      text-align: left;
+    }
+
+    .content-box h2 {
+      color: #4B0082;
+      text-align: center;
+    }
+
+    .content-box p, .profile-info, ul {
+      font-size: 18px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    a.link {
+      color: #0645AD;
+      text-decoration: underline;
+    }
+
+    .project-image {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 10px;
+      margin: 15px 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Hamburger Menu -->
+<div class="menu-icon" onclick="toggleMenu()">
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+</div>
+
+<!-- Dropdown Menu -->
+<div class="menu-items" id="menu">
+  <a href="#" onclick="showContent('home')">Home</a>
+  <a href="#" onclick="showContent('profile')">Profile</a>
+  <a href="#" onclick="showContent('projects')">Projects</a>
+</div>
+
+<!-- Page Content -->
+<div id="content">
+  <!-- Home -->
+  <div class="content-box" id="home">
+    <h2>Welcome to My Website!</h2>
+    <p>Hello everyone! I'm <strong>Sivaranjani Venugopal</strong>,<br>
+    a passionate student pursuing <strong>Electrical and Electronics Engineering</strong> at <strong>Rajalakshmi Engineering College</strong>.</p>
+    <p>I love exploring new technologies, solving real-world problems, and expressing my creativity through hands-on projects.</p>
+
+    <p style="margin-top: 20px;">
+      Instagram: 
+      <a class="link" href="https://www.instagram.com/sivaranjani.47" target="_blank">
+        https://www.instagram.com/sivaranjani.47
+      </a>
+    </p>
+    <p>
+      LinkedIn: 
+      <a class="link" href="https://www.linkedin.com/in/sivaranjani-venugopal-1714b928a" target="_blank">
+        https://www.linkedin.com/in/sivaranjani-venugopal-1714b928a
+      </a>
+    </p>
+  </div>
+
+  <!-- Profile -->
+  <div class="content-box" id="profile" style="display: none;">
+    <h2>My Profile</h2>
+    <div class="profile-info">
+      <p><strong>Full Name:</strong> Sivaranjani Venugopal</p>
+      <p><strong>Date of Birth:</strong> 13-11-2005</p>
+      <p><strong>Gender:</strong> Female</p>
+      <p><strong>Blood Group:</strong> A+ve</p>
+      <p><strong>Place of Birth:</strong> RANIPET</p>
+      <p><strong>Department:</strong> Electrical and Electronics Engineering</p>
+      <p><strong>College:</strong> Rajalakshmi Engineering College</p>
+      <p><strong>Email:</strong> sivaranjani.v131105@gmail.com</p>
+      <p><strong>Mobile:</strong> 6385565642</p>
+      <p><strong>Address:</strong> 391/3 Thiruvalluvar Cross Street,<br>
+         Vallalar Nagar, Navalpur, Ranipet</p>
+      <p><strong>CGPA (up to Semester 3):</strong> <span style="color: green;"><strong>8.2</strong></span></p>
+    </div>
+  </div>
+
+  <!-- Projects -->
+  <div class="content-box" id="projects" style="display: none;">
+    <h2>My Projects and My Achievements</h2>
+    <ul>
+      <li>Workshop</li>
+      <li>IEEE Membership</li>
+    </ul>
+    <!-- Placeholder for images -->
+    <img src="ieee.jpg" alt="ieee membership" class="project-image">
+    <img src="workshop.jpg" alt="Workshop" class="project-image">
+  </div>
+</div>
+
+<!-- JavaScript -->
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("menu");
+    menu.style.display = (menu.style.display === "block") ? "none" : "block";
+  }
+
+  function showContent(section) {
+    document.getElementById("home").style.display = "none";
+    document.getElementById("profile").style.display = "none";
+    document.getElementById("projects").style.display = "none";
+    document.getElementById(section).style.display = "block";
+    document.getElementById("menu").style.display = "none";
+  }
+</script>
+
+</body>
+</html>
+
+<!-- Projects -->
+<div class="content-box" id="projects" style="display: none;">
+  <h2>My Projects and My Achievements</h2>
+  <ul>
+    <li>Workshop – “Design and Development of Regulated Power Supply” (30–31 Aug 2024)</li>
+    <li>IEEE Student Member (Valid through Dec 2025)</li>
+  </ul>
+
+  <!-- Images (Replace with real image file names after converting from PDF) -->
+  <p><strong>Workshop Certificate:</strong></p>
+  <img src="workshop.jpg" alt="Workshop Certificate" class="project-image">
+
+  <p><strong>IEEE Membership Certificate:</strong></p>
+  <img src="ieee.jpg" alt="IEEE Certificate" class="project-image">
+</div>
