@@ -148,4 +148,35 @@
       <p><strong>CGPA (up to Semester 3):</strong> <span style="color: green;"><strong>8.2</strong></span></p>
     </div>
   </div>
+
+  <!-- Projects -->
+  <div class="content-box" id="projects" style="display: none;">
+    <h2>My Projects and My Achievements</h2>
+    <ul>
+      <li>Idea Presentation</li>
+      <li>Workshop</li>
+    </ul>
+    <!-- Placeholder for images -->
+    <img src="project1.jpg" alt="Project 1" class="project-image">
+    <img src="workshop.jpg" alt="Workshop" class="project-image">
+  </div>
+</div>
+
+<!-- JavaScript -->
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("menu");
+    menu.style.display = (menu.style.display === "block") ? "none" : "block";
+  }
+
+  function showContent(section) {
+    document.getElementById("home").style.display = "none";
+    document.getElementById("profile").style.display = "none";
+    document.getElementById("projects").style.display = "none";
+    document.getElementById(section).style.display = "block";
+    document.getElementById("menu").style.display = "none";
+  }
+</script>
+
+</body>
 </html>
